@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>time travel machine</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: "Comic Sans MS", cursive;
+      animation: flash 0.5s infinite;
+      color: white;
+    }
+
+    @keyframes flash {
+      0%   { background-color: #FF00FF; }
+      20%  { background-color: #00FFFF; }
+      40%  { background-color: #FFFF33; }
+      60%  { background-color: #39FF14; }
+      80%  { background-color: #FF1493; }
+      100% { background-color: #FF00FF; }
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      animation: textFlash 1s infinite alternate;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    @keyframes textFlash {
+      from { color: white; text-shadow: 0 0 10px white; }
+      to   { color: yellow; text-shadow: 0 0 20px #ff0; }
+    }
+
+    /* Spinning disco ball */
+    .disco {
+      display: inline-block;
+      animation: spin 2s linear infinite;
+      font-size: 2.5rem;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    /* Flipping dancers */
+    .dancers {
+      display: inline-block;
+      animation: turnAround 2s linear infinite;
+      transform-origin: center center;
+      font-size: 2.5rem;
+    }
+
+    @keyframes turnAround {
+      0%, 100% { transform: scaleX(1); }
+      50%      { transform: scaleX(-1); }
+    }
+
+    pre {
+      font-size: 1.2rem;
+      margin-top: 1em;
+      white-space: pre-wrap;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>
+    <span class="dancers">🕺</span><span class="dancers">💃</span><span class="dancers">🕺</span>
+    <span class="disco">🪩</span>
+    let's go to the 80s
+    <span class="disco">🪩</span>
+    <span class="dancers">🕺</span><span class="dancers">💃</span><span class="dancers">🕺</span>
+  </h1>
+
+  <pre>
+dun-na-dun-na-dun-na let's dance
+*dances away with funky music playing*
+  </pre>
+
+</body>
+</html>
